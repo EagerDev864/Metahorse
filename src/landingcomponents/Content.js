@@ -7,7 +7,7 @@ import { Legendary } from "./Legendary";
 import { Munityprog } from "./Munityprog";
 import { Art } from "./Art";
 import { Partners } from "./Partners";
-import { Munitynew } from "./Munitynew";
+// import { Munitynew } from "./Munitynew";
 import { Munityadd } from "./Munityadd";
 import { DataFeed } from "./DataFeed";
 

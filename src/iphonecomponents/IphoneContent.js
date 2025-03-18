@@ -7,7 +7,7 @@ import { IContent5 } from "./IContent5";
 import { IContent6 } from "./IContent6";
 import { IContent7 } from "./IContent7";
 import { IContent8 } from "./IContent8";
-import { IContent9 } from "./IContent9";
+// import { IContent9 } from "./IContent9";
 import { IContent10 } from "./IContent10";
 import "./styleISlide.css";
 import "./styleIphoneContent.css";

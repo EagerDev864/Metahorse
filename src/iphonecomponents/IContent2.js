@@ -1,4 +1,4 @@
-import GameImg from "../images/Games.png";
+// import GameImg from "../images/Games.png";
 import Game1 from "../images/Game1.png";
 import Game2 from "../images/Game2.png";
 import Game3 from "../images/Game3.png";

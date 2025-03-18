@@ -5,7 +5,7 @@ import { FundingContext } from "./FundingContext";
 export const AvailableStaked = () => {
   const [isconnect, SetIsconnect] = useState(false);
   const { availableNfts, stakedNfts } = useContext(FundingContext);
-  const { address, isConnecting, isDisconnected } = useAccount();
+  const { isConnecting, isDisconnected } = useAccount();
   useEffect(() => {
     (async () => {
       if (!isConnecting && !isDisconnected) SetIsconnect(true);
@@ -35,7 +35,7 @@ export const AvailableStaked = () => {
 
               <div className="bottomTitle">
                 {availableNfts.map((item, index) => {
-                  if (index % 2 === 1) return;
+                  if (index % 2 === 1) return false;
                   return (
                     <div className="imgTitles">
                       <video
@@ -59,7 +59,7 @@ export const AvailableStaked = () => {
                         >
                           <source src={availableNfts[index + 1]} />
                         </video>
-                      ) : availableNfts.length % 2 == 1 ? (
+                      ) : availableNfts.length % 2 === 1 ? (
                         <div></div>
                       ) : (
                         ""
@@ -84,7 +84,7 @@ export const AvailableStaked = () => {
               </div>
               <div className="bottomTitle">
                 {stakedNfts.map((item, index) => {
-                  if (index % 2 === 1) return;
+                  if (index % 2 === 1) return false;
                   return (
                     <div className="imgTitles">
                       <video
@@ -108,7 +108,7 @@ export const AvailableStaked = () => {
                         >
                           <source src={stakedNfts[index + 1]} />
                         </video>
-                      ) : stakedNfts.length % 2 == 1 ? (
+                      ) : stakedNfts.length % 2 === 1 ? (
                         <div></div>
                       ) : (
                         ""

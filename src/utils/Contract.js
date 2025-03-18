@@ -2,10 +2,10 @@ import { BigNumber, ethers } from "ethers";
 import {
   contractABI,
   contractAddress,
-  nftCollectionABI,
-  nftCollectionAddress,
-  nftStakingContractABI,
-  nftStakingContractAddress,
+  // nftCollectionABI,
+  // nftCollectionAddress,
+  // nftStakingContractABI,
+  // nftStakingContractAddress,
   testNftCollectionABI,
   testNftCollectionAddress,
   testNftStakingContractABI,
@@ -22,13 +22,13 @@ let ethStakingContractToGET,
 let walletAddressETHToGET,
   walletAddressETHToPOST,
   walletAddressNFTCollectionToGET,
-  walletAddressNFTCollectionToPOST,
+  // walletAddressNFTCollectionToPOST,
   walletAddressNFTStakingToGET,
   walletAddressNFTStakingToPOST;
 const sepoliaChainId = 11155111,
-  sepoliaChainIdHex = "0xaa36a7",
-  polygonChainId = 137,
-  polygonChainIdHex = "0x89";
+  sepoliaChainIdHex = "0xaa36a7";
+  // polygonChainId = 137,
+  // polygonChainIdHex = "0x89";
 
 //Initialize the Contract.
 export const initEthStakingContractToGET = async (address) => {
@@ -82,7 +82,7 @@ export const initNftCollectionContractToGET = async (address) => {
 };
 
 export const initNftCollectionContractToPOST = async (address) => {
-  walletAddressNFTCollectionToPOST = address;
+  // const walletAddressNFTCollectionToPOST = address;
   const provider = new ethers.providers.Web3Provider(ethereum);
   await provider.send("eth_requestAccounts", []);
   // const provider = new ethers.providers.JsonRpcProvider(

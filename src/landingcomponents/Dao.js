@@ -7,11 +7,11 @@ export const Dao = () => {
     opacity: isFadeLeftInViewPort ? "1" : "0",
     transform: isFadeLeftInViewPort ? "" : "translateY(40px)",
   });
-  const getFadeRightStyles = (isFadeLeftInViewPort) => ({
-    transition: "all 1.5s ease-in",
-    opacity: isFadeLeftInViewPort ? "1" : "0",
-    transform: isFadeLeftInViewPort ? "" : "translateX(100%)",
-  });
+  // const getFadeRightStyles = (isFadeLeftInViewPort) => ({
+  //   transition: "all 1.5s ease-in",
+  //   opacity: isFadeLeftInViewPort ? "1" : "0",
+  //   transform: isFadeLeftInViewPort ? "" : "translateX(100%)",
+  // });
   return (
     <div className="Dao">
       <AnimatedSection getStyles={getFadeTopStyles}>

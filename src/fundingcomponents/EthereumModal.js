@@ -32,7 +32,7 @@ export const EthereumModal = (props) => {
   const AlertContext = useContext(MyContext);
   const [modalShow, setModalShow] = useState(false);
   const [stakeType, setStakeType] = useState("");
-  const [futureDateString, setFutureDateString] = useState("");
+  // const [futureDateString, setFutureDateString] = useState("");
   const onSetModal = (visible) => {
     setModalShow(visible);
   };
@@ -49,10 +49,10 @@ export const EthereumModal = (props) => {
       window.ethereum.on("chainChanged", (chainID) => {
         if (
           !(
-            chainID == 5 ||
-            chainID == 11155111 ||
-            chainID == 1 ||
-            chainID == 137
+            chainID === 5 ||
+            chainID === 11155111 ||
+            chainID === 1 ||
+            chainID === 137
           )
         )
           disconnect();

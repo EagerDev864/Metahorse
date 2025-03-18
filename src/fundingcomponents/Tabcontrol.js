@@ -6,7 +6,7 @@ import walletIcon from "../images/Wallet.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 export const Tabcontrol = () => {
-  const [activeBtn, setActiveBtn] = useState("right");
+  const activeBtn = "right";
   const [isconnect, SetIsconnect] = useState(false);
   const { address, isConnecting, isDisconnected } = useAccount();
   const { open } = useWeb3Modal();

@@ -1,11 +1,11 @@
 import { useAccount, useDisconnect } from "wagmi";
-import { useWeb3Modal } from "@web3modal/wagmi/react";
+// import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useEffect, useState } from "react";
 import MM from "../landingcomponents/Toast/MM";
 
-import HeaderIconR1 from "../images/HeaderIconR1.svg";
-import HeaderIconR2 from "../images/HeaderIconR2.svg";
-import { NonceTooLowError } from "viem";
+// import HeaderIconR1 from "../images/HeaderIconR1.svg";
+// import HeaderIconR2 from "../images/HeaderIconR2.svg";
+// import { NonceTooLowError } from "viem";
 export const Wallnetbtn = () => {
   const { isConnecting, isDisconnected } = useAccount();
   // const { open } = useWeb3Modal();
@@ -18,10 +18,10 @@ export const Wallnetbtn = () => {
       window.ethereum.on("chainChanged", (chainID) => {
         if (
           !(
-            chainID == 5 ||
-            chainID == 11155111 ||
-            chainID == 1 ||
-            chainID == 137
+            chainID === 5 ||
+            chainID === 11155111 ||
+            chainID === 1 ||
+            chainID === 137
           )
         )
           disconnect();

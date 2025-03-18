@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
+import React from "react";
+// import PropTypes from "prop-types";
 import { useIsInViewport } from "./useIsInViewport";
 export const AnimatedSection = ({ getStyles, children }) => {
   const elementRef = React.useRef();

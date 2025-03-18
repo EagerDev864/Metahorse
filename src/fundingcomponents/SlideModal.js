@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useAccount } from "wagmi";
 import { Slide } from "./Slide";
-import { useWeb3Modal } from "@web3modal/wagmi/react";
+// import { useWeb3Modal } from "@web3modal/wagmi/react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import {
   getNftTotalStaked,
@@ -12,14 +12,14 @@ import {
 } from "../utils/Contract";
 import { MyContext } from "../landingcomponents/MyContext";
 import { FundingContext } from "./FundingContext";
-import { Funding } from "./Funding";
+// import { Funding } from "./Funding";
 import { StakeSettingModal } from "./StakeSettingModal";
 
 export const SlideModal = () => {
   const AlertContext = useContext(MyContext);
   const [isconnect, SetIsconnect] = useState(false);
   const { address, isConnecting, isDisconnected } = useAccount();
-  const { open } = useWeb3Modal();
+  // const { open } = useWeb3Modal();
   const { tokenId, currentStaked } = useContext(FundingContext);
   const [nftTotalStaked, setNftTotalStaked] = useState(0);
   const [nftTokenMunityMedals, setNftTokenMunityMedals] = useState(0);

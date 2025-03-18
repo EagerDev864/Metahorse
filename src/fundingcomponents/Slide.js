@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import SlideLBtn2 from "../images/SlideLBtn2.svg";
 import SlideRBtn2 from "../images/SlideRBtn2.svg";
 import Slidecontent1 from "../images/Slidecontent1.png";
@@ -7,12 +7,12 @@ import SlideRBtnHo2 from "../images/SlideRBtnHo2.svg";
 import SlideLBtnHo2 from "../images/SlideLBtnHo2.svg";
 import { useAccount } from "wagmi";
 import SpinnerImg from "../images/Spinner.jpg";
-import _ from "lodash";
+// import _ from "lodash";
 
 export const Slide = (props) => {
   const { address } = useAccount();
   const [index, setIndex] = React.useState(0);
-  const timeoutRef = React.useRef(null);
+  // const timeoutRef = React.useRef(null);
   const [isHoveredL, setIsHoveredL] = useState(false);
   const [isHoveredR, setIsHoveredR] = useState(false);
   const [allNfts, setAllNfts] = useState([]);
@@ -25,7 +25,6 @@ export const Slide = (props) => {
     isStaked,
     resetTokenID,
     resetCurrentStaked,
-    activeBtn,
   } = props.contextData;
 
   useEffect(() => {
@@ -57,6 +56,7 @@ export const Slide = (props) => {
       >
         {allNfts.length === 0 ? (
           <img
+            alt={""}
             src={SpinnerImg}
             width={424}
             height={424}

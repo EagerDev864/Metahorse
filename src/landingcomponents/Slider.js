@@ -8,7 +8,7 @@ export const Slider = ({
   y,
 }) => {
   let classNames = "slide";
-  let index = 0;
+  // let index = 0;
   if (current === slide.index) {
     classNames += " slide--current";
   }
